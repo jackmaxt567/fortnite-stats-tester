@@ -1,17 +1,17 @@
 {
   "name": "fortnite-stats-tester",
   "version": "1.0.0",
-  "description": "A test web app for displaying Fortnite tournament stats using the Osirion API",
+  "description": "",
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "start": "node app.js"
-  },
-  
+  "start": "node app.js",
+  "postinstall": "puppeteer install"
+}
+,
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "@osirion/api": "^2.0.1",
     "ejs": "^3.1.10",
