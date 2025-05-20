@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fortnite Stats Checker</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Fortnite Tournament Stats</h1>
+    <%- include('partials/header') %>
+<h2 class="centered-heading">Enter your Epic username</h2>
+
+<div class="form-container">
+  <form action="/select-event" method="POST">
+    <input type="text" name="username" placeholder="Enter your Epic username" required>
+    <button type="submit">View Stats</button>
+  </form>
+</div>
+
+<%- include('partials/footer') %>
+
+  
+</body>
+</html>

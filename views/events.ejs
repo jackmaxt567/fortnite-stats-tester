@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Tournament</title>
+</head>
+<body>
+  <h1>Choose Tournament for <%= username %></h1>
+  <form action="/stats" method="POST" class="tournament-form">
+  <input type="hidden" name="username" value="<%= username %>">
+  <select name="selectedEvent" class="dropdown">
+    <% events.forEach(event => { %>
+      <option value="<%= event %>"><%= event %></option>
+    <% }) %>
+  </select>
+  <button type="submit" class="submit-btn">View Stats</button>
+</form>
+
+</body>
+</html>

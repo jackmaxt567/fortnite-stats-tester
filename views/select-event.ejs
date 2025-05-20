@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+  <a href="/" class="home-button">🏠 Home</a>
+
+  <%- include('partials/header') %>
+<h2 class="centered-heading">Select a Tournament for <%= username %></h2>
+
+<link rel="stylesheet" href="/style.css" />
+<div class="dropdown-container">
+  <form action="/stats" method="POST">
+  <!-- Pass username back as a hidden field -->
+  <input type="hidden" name="username" value="<%= username %>">
+
+  <label for="selectedEvent">Select a Tournament for <%= username %>:</label>
+  <select name="selectedEvent" id="selectedEvent" required>
+    <% events.forEach(function(event) { %>
+      <option value="<%= event %>"><%= event %></option>
+    <% }); %>
+  </select>
+
+  <button type="submit">View Stats</button>
+</form>
+</div>
+
+<%- include('partials/footer') %>
+
+</body>
+</html>
