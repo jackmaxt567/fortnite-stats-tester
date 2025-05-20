@@ -18,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 async function getRecentEvents(epicName) {
   const url = `https://fortnitetracker.com/profile/all/${encodeURIComponent(epicName)}/events`;
   const browser = await puppeteer.launch({ headless: true });
+  args: ['--no-sandbox', '--disable-setuid-sandbox'],
   const page = await browser.newPage();
   await page.setUserAgent('Mozilla/5.0');
   await page.goto(url, { waitUntil: 'networkidle2' });
